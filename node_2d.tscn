@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://m2qs8eh03fyy"]
+
+[ext_resource type="Script" uid="uid://cbn76jqom0v5e" path="res://node_2d.gd" id="1_0e48y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wtcfe"]
+font_size = 53
+
+[sub_resource type="LabelSettings" id="LabelSettings_0e48y"]
+font_size = 37
+
+[sub_resource type="LabelSettings" id="LabelSettings_epypp"]
+font_size = 35
+
+[node name="Node2D" type="Node2D" unique_id=1996822036]
+script = ExtResource("1_0e48y")
+
+[node name="VelocityLabel" type="Label" parent="." unique_id=1748754736]
+offset_left = 7.0
+offset_top = 92.0
+offset_right = 644.0
+offset_bottom = 242.0
+text = "AAAAAAAA"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResponseLabel" type="Label" parent="." unique_id=1944527897]
+offset_left = 9.0
+offset_top = 212.0
+offset_right = 646.0
+offset_bottom = 362.0
+text = "Response: "
+label_settings = SubResource("LabelSettings_0e48y")
+vertical_alignment = 1
+
+[node name="IsReadyLabel" type="Label" parent="." unique_id=88714583]
+offset_left = 9.0
+offset_top = 344.0
+offset_right = 646.0
+offset_bottom = 494.0
+text = "IsReady: false"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OutputLabel" type="Label" parent="." unique_id=1145395659]
+offset_left = 9.0
+offset_top = 507.0
+offset_right = 646.0
+offset_bottom = 1137.0
+text = "output:
+"
+label_settings = SubResource("LabelSettings_epypp")
