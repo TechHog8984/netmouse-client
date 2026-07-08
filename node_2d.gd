@@ -91,7 +91,8 @@ func _process(_delta):
                         socket.send_text("click4")
             else:
                 logstr("Connection is open.")
-                socket.send_text("screensize" + str(DisplayServer.screen_get_size()))
+                var size = DisplayServer.screen_get_size()
+                socket.send_text("screensize" + str(size.x) + "," + str(size.y))
                 $StopButton.disabled = false
             has_initialized = true
 
