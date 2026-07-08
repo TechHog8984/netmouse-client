@@ -15,49 +15,20 @@ font_size = 35
 [node name="Node2D" type="Node2D" unique_id=1996822036]
 script = ExtResource("1_0e48y")
 
-[node name="VelocityLabel" type="Label" parent="." unique_id=1748754736]
-offset_left = 17.0
-offset_top = 177.0
-offset_right = 654.0
-offset_bottom = 250.0
-text = "AAAAAAAA"
-label_settings = SubResource("LabelSettings_wtcfe")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ResponseLabel" type="Label" parent="." unique_id=1944527897]
-offset_left = 17.0
-offset_top = 285.0
-offset_right = 654.0
-offset_bottom = 414.0
-text = "Response: "
-label_settings = SubResource("LabelSettings_0e48y")
-
-[node name="IsReadyLabel" type="Label" parent="." unique_id=88714583]
-offset_left = 19.0
-offset_top = 414.0
-offset_right = 656.0
-offset_bottom = 499.0
-text = "IsReady: false"
-label_settings = SubResource("LabelSettings_wtcfe")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="OutputLabel" type="Label" parent="." unique_id=1145395659]
-offset_left = 14.0
-offset_top = 525.0
-offset_right = 651.0
-offset_bottom = 1139.0
-text = "output:
-"
-label_settings = SubResource("LabelSettings_epypp")
-
 [node name="IpDropdown" type="OptionButton" parent="." unique_id=713664410]
 offset_left = 145.0
 offset_top = 31.0
 offset_right = 548.0
 offset_bottom = 77.0
 script = ExtResource("2_0e48y")
+
+[node name="StartButton" type="Button" parent="." unique_id=912868365]
+offset_left = 160.0
+offset_top = 92.0
+offset_right = 223.0
+offset_bottom = 151.0
+theme_override_font_sizes/font_size = 22
+text = "Start"
 
 [node name="StopButton" type="Button" parent="." unique_id=1074006984]
 offset_left = 236.0
@@ -67,10 +38,45 @@ offset_bottom = 150.0
 theme_override_font_sizes/font_size = 37
 text = "Stop"
 
-[node name="StartButton" type="Button" parent="." unique_id=912868365]
-offset_left = 160.0
-offset_top = 92.0
-offset_right = 223.0
-offset_bottom = 151.0
-theme_override_font_sizes/font_size = 22
-text = "Start"
+[node name="UrlEdit" type="LineEdit" parent="." unique_id=456231571]
+offset_left = 12.0
+offset_top = 186.0
+offset_right = 536.0
+offset_bottom = 263.0
+theme_override_font_sizes/font_size = 31
+placeholder_text = "URL"
+
+[node name="OpenUrlButton" type="Button" parent="." unique_id=80248257]
+offset_left = 551.0
+offset_top = 197.0
+offset_right = 625.0
+offset_bottom = 256.0
+theme_override_font_sizes/font_size = 25
+text = "Open"
+
+[node name="VelocityLabel" type="Label" parent="." unique_id=1748754736]
+offset_left = 10.0
+offset_top = 289.0
+offset_right = 647.0
+offset_bottom = 362.0
+text = "AAAAAAAA"
+label_settings = SubResource("LabelSettings_wtcfe")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResponseLabel" type="Label" parent="." unique_id=1944527897]
+offset_left = 6.0
+offset_top = 378.0
+offset_right = 643.0
+offset_bottom = 507.0
+text = "Response: "
+label_settings = SubResource("LabelSettings_0e48y")
+
+[node name="OutputLabel" type="Label" parent="." unique_id=1145395659]
+offset_left = 14.0
+offset_top = 525.0
+offset_right = 651.0
+offset_bottom = 1139.0
+text = "output:
+"
+label_settings = SubResource("LabelSettings_epypp")

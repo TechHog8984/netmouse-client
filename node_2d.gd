@@ -12,6 +12,7 @@ func _ready():
     $IpDropdown.item_selected.connect(_on_ip_select)
     $StopButton.pressed.connect(stop)
     $StartButton.pressed.connect(_on_start_button)
+    $OpenUrlButton.pressed.connect(_on_open_url_button)
 
 var has_connected = false
 var has_initialized = false
@@ -33,6 +34,11 @@ func _on_ip_select(num):
     stop()
     websocket_url = "ws://192.168.2.%d:22322" % num
     start()
+    
+func _on_open_url_button():
+    if not has_initialized:
+        return
+    socket.send_text("openurl %s" % $UrlEdit.text)
 
 func stop():
     if has_connected:
