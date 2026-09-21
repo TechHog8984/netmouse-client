@@ -32,7 +32,7 @@ func _on_start_button():
 
 func _on_ip_select(num):
     stop()
-    websocket_url = "ws://192.168.2.%d:22322" % num
+    websocket_url = "ws://" + $IPPrefixEdit.text + "%d:22322" % num
     start()
     
 func _on_open_url_button():

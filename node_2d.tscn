@@ -15,10 +15,19 @@ font_size = 35
 [node name="Node2D" type="Node2D" unique_id=1996822036]
 script = ExtResource("1_0e48y")
 
+[node name="IPPrefixEdit" type="LineEdit" parent="." unique_id=138969399]
+offset_left = 13.0
+offset_top = 29.0
+offset_right = 158.0
+offset_bottom = 81.0
+theme_override_font_sizes/font_size = 18
+text = "192.168.2."
+placeholder_text = "IP Prefix"
+
 [node name="IpDropdown" type="OptionButton" parent="." unique_id=713664410]
-offset_left = 145.0
+offset_left = 171.0
 offset_top = 31.0
-offset_right = 548.0
+offset_right = 574.0
 offset_bottom = 77.0
 script = ExtResource("2_0e48y")
 
