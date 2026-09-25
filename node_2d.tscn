@@ -32,20 +32,44 @@ offset_bottom = 77.0
 script = ExtResource("2_0e48y")
 
 [node name="StartButton" type="Button" parent="." unique_id=912868365]
-offset_left = 160.0
-offset_top = 92.0
-offset_right = 223.0
-offset_bottom = 151.0
+offset_left = 16.0
+offset_top = 98.0
+offset_right = 79.0
+offset_bottom = 157.0
 theme_override_font_sizes/font_size = 22
 text = "Start"
 
 [node name="StopButton" type="Button" parent="." unique_id=1074006984]
-offset_left = 236.0
-offset_top = 91.0
-offset_right = 418.0
-offset_bottom = 150.0
+offset_left = 92.0
+offset_top = 97.0
+offset_right = 274.0
+offset_bottom = 156.0
 theme_override_font_sizes/font_size = 37
 text = "Stop"
+
+[node name="VolDownButton" type="Button" parent="." unique_id=1862405914]
+offset_left = 344.0
+offset_top = 98.0
+offset_right = 407.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 22
+text = "Vol-"
+
+[node name="VolUpButton" type="Button" parent="." unique_id=775151944]
+offset_left = 416.0
+offset_top = 98.0
+offset_right = 479.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 22
+text = "Vol+"
+
+[node name="SpaceButton" type="Button" parent="." unique_id=1495550014]
+offset_left = 491.0
+offset_top = 100.0
+offset_right = 615.0
+offset_bottom = 159.0
+theme_override_font_sizes/font_size = 37
+text = "Space"
 
 [node name="UrlEdit" type="LineEdit" parent="." unique_id=456231571]
 offset_left = 12.0

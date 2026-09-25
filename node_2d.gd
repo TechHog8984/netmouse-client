@@ -13,9 +13,16 @@ func _ready():
     $StopButton.pressed.connect(stop)
     $StartButton.pressed.connect(_on_start_button)
     $OpenUrlButton.pressed.connect(_on_open_url_button)
+    $VolDownButton.pressed.connect(_on_vol_down_button)
+    $VolUpButton.pressed.connect(_on_vol_up_button)
+    $SpaceButton.pressed.connect(_on_space_button)
 
 var has_connected = false
 var has_initialized = false
+
+var wants_voldown = false
+var wants_volup = false
+var wants_space = false
 
 func start():
     logstr("Initiating connection to %s" % websocket_url)
@@ -39,6 +46,13 @@ func _on_open_url_button():
     if not has_initialized:
         return
     socket.send_text("openurl %s" % $UrlEdit.text)
+
+func _on_vol_up_button():
+    wants_volup = true
+func _on_vol_down_button():
+    wants_voldown = true
+func _on_space_button():
+    wants_space = true
 
 func stop():
     if has_connected:
@@ -95,6 +109,15 @@ func _process(_delta):
                         socket.send_text("click3")
                     if press3:
                         socket.send_text("click4")
+                if wants_voldown:
+                    socket.send_text("voldown")
+                    wants_voldown = false
+                if wants_volup:
+                    socket.send_text("volup")
+                    wants_volup = false
+                if wants_space:
+                    socket.send_text("space")
+                    wants_space = false
             else:
                 logstr("Connection is open.")
                 var size = DisplayServer.screen_get_size()
